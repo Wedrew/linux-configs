@@ -4,8 +4,8 @@ syntax on
 set backspace=indent,eol,start
 set shiftwidth=4
 
-set editing-mode vi
-set keymap vi
+"set editing-mode vi
+"set keymap vi
 
 set tabstop=4
 set softtabstop=4
