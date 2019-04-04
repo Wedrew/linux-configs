@@ -4,6 +4,8 @@ userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
+i3config=$HOME/.config/i3/config
+
 
 # merge in defaults and keymaps
 
@@ -48,5 +50,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-xscreensaver -nosplash &
-exec i3
+#xscreensaver -nosplash &
+exec i3 -c "$i3config"
+
