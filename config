@@ -23,8 +23,10 @@ font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 
 # Remove title bar
-for_window [class="^.*"] border pixel 1
-new_window 1pixel
+for_window [class="^.*"] border pixel 0
+
+# Hide edges using smart setting
+hide_edge_borders smart
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
