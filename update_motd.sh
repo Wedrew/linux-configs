@@ -51,8 +51,6 @@ R="\033[01;34m"
 X="\033[01;37m"
 A="\033[01;32m"
 
-#echo -e \\e[2J\\e[\;H > $motd
-
 #Clear screen before motd
 clear > $motd
 
@@ -77,7 +75,9 @@ echo -e "       $R CPU    $W= $CPU                                    " >> $motd
 echo -e "       $R HOSTNAME $W= $HOSTNAME                             " >> $motd
 echo -e "       $R ARCH $W= $ARCH                                     " >> $motd
 echo -e "       $R SYSTEM $W= $PACMAN packages can be updated         " >> $motd
-echo -e "       $R USERS $W= Currently `users | wc -w` users logged on " >> $motd
+echo -e "       $R USERS $W= Currently `users | tr ' ' '\n' | sort | uniq | wc -w` total users logged on " >> $motd
+echo -e "       $R OTHER USERS $W= `users | tr ' ' '\n' | sort | uniq`" >> $motd
+echo -e "       $R SSH CONNECTIONS $W= `users | wc -w`" >> $motd
 echo -e "$R===============================================================" >> $motd
 echo -e "       $R CPU Usage $W= $LOAD1(1m) $LOAD5(5m) $LOAD15(15m)" >> $motd
 echo -e "       $R CPU Temperature $W= `acpi -t | cut -f4 -d' '` C" >> $motd
