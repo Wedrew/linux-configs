@@ -51,25 +51,29 @@ R="\033[01;34m"
 X="\033[01;37m"
 A="\033[01;32m"
 
+LOGO="
+          .   
+         /#\                        _        _ _
+        /###\         __ _ _ __ ___| |__    | (_)_ __  _   ___  __ 
+       /#####\       / _' | '__/ __| '_ \   | | | '_ \| | | \ \/ /
+      /##.-.##\     | (_| | | | (__| | | |  | | | | | | |_| |>  <  
+     /##(   )##\     \__,_|_|  \___|_| |_|  |_|_|_| |_|\__,_/_/\_\\
+    /#.--   --.#\   
+   /'           '\   
+ "
+
+TUX=`fortune -o | cowsay -f tux`
+LOGO+=$TUX
+LOGO=`echo "$LOGO" | lolcat -f`
+
+
 #Clear screen before motd
 clear > $motd
 
-echo -e "
-        $A. $X
-       $A/#\ $X                     _     $A _ _
-      $A/###\ $X      __ _ _ __ ___| |__  $A| (_)_ __  _   ___  __ 
-     $A/#####\ $X    / _' | '__/ __| '_ \ $A| | | '_ \| | | \ \/ /
-    $A/##.-.##\ $X  | (_| | | | (__| | | |$A| | | | | | |_| |>  <  
-   $A/##(   )##\ $X  \__,_|_|  \___|_| |_|$A|_|_|_| |_|\__,_/_/\_\\
-  $A/#.--   --.#\ $X
- $A/'           '\ $B 
-">> $motd
-
-#echo -e "$R===============================================================" >> $motd
-echo -e "`fortune -o | cowsay -f tux | lolcat -f`" >> $motd
+echo -e "$LOGO" >> $motd
 
 echo -e "$R===============================================================" >> $motd
-echo -e "       $W Good $TIME, $B$PAM_USER.$W Welcome to $B$HOSTNAME                " >> $motd
+echo -e "       $W Good $TIME, $B$PAM_USER.$W Welcome to $B$HOSTNAME  " >> $motd
 echo -e "       $R KERNEL $W= $KERNEL                                 " >> $motd
 echo -e "       $R CPU    $W= $CPU                                    " >> $motd
 echo -e "       $R HOSTNAME $W= $HOSTNAME                             " >> $motd
