@@ -1,11 +1,11 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.42 for apagan on Sun Mar 17 21:48:17 2019.
+# Written by xscreensaver-demo 5.42 for apagan on Tue Apr  2 19:28:47 2019.
 # https://www.jwz.org/xscreensaver/
 
-timeout:	0:05:00
+timeout:	0:10:00
 cycle:		0:05:00
 lock:		True
-lockTimeout:	0:00:00
+lockTimeout:	0:15:00
 passwdTimeout:	0:00:30
 visualID:	default
 installColormap:    True
@@ -24,10 +24,10 @@ fadeTicks:	20
 captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
-dpmsEnabled:	False
+dpmsEnabled:	True
 dpmsQuickOff:	False
-dpmsStandby:	0:05:00
-dpmsSuspend:	0:10:00
+dpmsStandby:	2:00:00
+dpmsSuspend:	3:20:00
 dpmsOff:	4:00:00
 grabDesktopImages:  False
 grabVideoFrames:    False
@@ -108,7 +108,7 @@ programs:								      \
 				kumppa -root				    \n\
 - GL: 				lament -root				    \n\
 				moire2 -root				    \n\
-  GL: 				sonar -root				    \n\
+- GL: 				sonar -root				    \n\
   GL: 				stairs -root				    \n\
 				truchet -root				    \n\
 -				vidwhacker -root			    \n\
@@ -147,7 +147,7 @@ programs:								      \
   GL: 				molecule -root				    \n\
 -				rotzoomer -root				    \n\
 				speedmine -root				    \n\
-  GL: 				starwars -root				    \n\
+- GL: 				starwars -root				    \n\
   GL: 				stonerview -root			    \n\
 				vermiculate -root			    \n\
 				whirlwindwarp -root			    \n\
@@ -210,7 +210,7 @@ programs:								      \
 				pacman -root				    \n\
   GL: 				pinion -root				    \n\
   GL: 				polyhedra -root				    \n\
-  GL: 				providence -root			    \n\
+- GL: 				providence -root			    \n\
 				substrate -root				    \n\
 				wormhole -root				    \n\
 - GL: 				antmaze -root				    \n\
