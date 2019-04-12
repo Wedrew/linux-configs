@@ -1,6 +1,5 @@
 #!/bin/bash
 #Script to update motd with relevant information.
-# Place in /usr/bin and update /etc/pam.d/system-login
 
 #Define output file
 motd="/etc/motd"
@@ -52,10 +51,12 @@ R="\033[01;34m"
 X="\033[01;37m"
 A="\033[01;32m"
 
+#echo -e \\e[2J\\e[\;H > $motd
+
 #Clear screen before motd
 clear > $motd
 
-ARCH="
+echo -e "
         $A. $X
        $A/#\ $X                     _     $A _ _
       $A/###\ $X      __ _ _ __ ___| |__  $A| (_)_ __  _   ___  __ 
